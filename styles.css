@@ -77,6 +77,8 @@ header {
   height: 2.5em;
   position: sticky;
   top: 0;
+  transition-property: all;
+  transition-duration: 400ms;
 }
 
 svg.menu {
@@ -95,11 +97,14 @@ nav {
   display: flex;
   flex-direction: column;
   visibility: collapse; /* don't display nav items initially */
+  opacity: 0;
+  transition: opacity 800ms;
 }
 
 /* class styles to applied with JS */
 nav.expand {
   visibility: visible;
+  opacity: 1;
 }
 
 header.expand {
@@ -145,6 +150,7 @@ footer {
   nav {
     flex-direction: row;
     visibility: visible;
+    opacity: 1;
   }
 
   header.expand {
